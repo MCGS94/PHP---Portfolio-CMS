@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Helpdesk Dash</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="text-center sidebar-header">
+                <h3>Helpdesk Dash</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="row position-relative">
+                <img class="img-fluid position-absolute ml-2 col-md-4 rounded-circle h-20 w-20" src="img/avatar.png" alt="Avatar">
+                <p class="ml-5 pl-5 col-md-8" >Jean Pierre</p>
+                </li>
+                <li class="border-top border-secondary" >
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active">
+                    <a href="content.html">Content</a>
+                </li>
+                <li>
+                    <a href="user.html">Users</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled logout">
+              <li>
+                  <a href="" class="btn btn-danger btn-sm text-center "> Logout <i class="fas fa-sign-out-alt"></i> </a>
+              </li>
+          </ul>
+
+        </nav>
+
+ <!-- Page Content Holder --> 
+               
+<div id="content">
+    <button type="button" id="sidebarCollapse" class="navbar-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+<div class="container">
+
+<header id="main-header" class="py-2 text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>
+            Content Management</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DETAILS -->
+  <section id="details" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h4>Edit Content</h4>
+            </div>
+            <div class="card-body">
+              <form>
+                <h5><u>Header</u></h5>
+                <img src="data:image/png;base64,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" alt="..." class="img-thumbnail my-4">
+                <div class="form-group">
+                  <label for="image">Upload Image</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="image">
+                    <label for="image" class="custom-file-label mb-2">Choose File</label>
+                    <small class="form-text text-muted">Max Size 1mb</small>
+                </div>
+              <hr>
+              <h5><u>About</u></h5>
+                </div>
+                <div class="form-group">
+                  <label for="user">Nom</label>
+                  <input type="text" class="form-control" value="Jhon">
+                </div>
+                <div class="form-group">
+                  <label for="user">Job</label>
+                  <input type="text" class="form-control" value="Jhon">
+                </div>
+                 <div class="form-group">
+                  <label for="body">Description</label>
+                  <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
+                </div>
+                <div class="form-group">
+                  <label for="user">Lien Linkedin</label>
+                  <input type="text" class="form-control" value="Jhon">
+                </div>
+                <div class="form-group">
+                  <label for="user">Lien Github</label>
+                  <input type="text" class="form-control" value="Jhon">
+                </div>
+                <div class="form-group">
+                  <label for="user">Lien Dribble</label>
+                  <input type="text" class="form-control" value="Jhon">
+                </div>
+              <hr>
+              <h5><u>Skills</u></h5>
+              <div class="form-group">
+                <label for="user">Skill Title 1</label>
+                <input type="text" class="form-control" value="Jhon">
+              </div>
+              <div class="form-group">
+                <label for="body">Skill Description 1</label>
+                <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
+              </div>
+              <div class="form-group">
+                <label for="user">Skill Title 2</label>
+                <input type="text" class="form-control" value="Jhon">
+              </div>
+              <div class="form-group">
+                <label for="body">Skill Description 2</label>
+                <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
+              </div>
+              <hr>
+              <h5><u>Portfolio</u></h5>
+              <div class="col-md-3" >
+                <a href="portfolios.html" class="btn btn-success btn-block my-4">
+                  <i class="fas fa-chevron"></i> Edit Portfolio
+                </a>
+              </div>
+              <hr>
+              <h5><u>Contact</u></h5>
+              <div class="form-group">
+                <label for="user">E-mail</label>
+                <input type="text" class="form-control" value="Jhon">
+              </div>
+              <div class="form-group">
+                <label for="user">Phone</label>
+                <input type="text" class="form-control" value="Jhon">
+              </div>
+              <div class="form-group">
+                <label for="user">Adress</label>
+                <input type="text" class="form-control" value="Jhon">
+              </div>
+              <hr>
+              <h5><u>Social media (footer)</u></h5>
+              <div class="form-group">
+                <label for="user">Lien Facebook</label>
+                <input type="text" class="form-control" value="Jhon">
+              </div>
+              <div class="form-group">
+                <label for="user">Lien Instagram</label>
+                <input type="text" class="form-control" value="Jhon">
+              </div>
+              <div class="form-group">
+                <label for="user">Lien Twitter</label>
+                <input type="text" class="form-control" value="Jhon">
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ACTIONS -->
+    <section id="actions" class="py-4 mb-4 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 offset-md-8">
+            <a href="index.html" class="btn btn-success btn-block">
+              <i class="fas fa-arrow"></i> Save Changes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </div>
+</div>
+</div>
+
+<!-- ADD CATEGORY MODAL -->
+<div class="modal fade" id="sendmessageModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header purple text-white">
+        <h5 class="modal-title">Send message</h5>
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="title">Objet</label>
+            <input type="text-area" class="form-control">
+          </div>
+          <label for="body">Message</label>
+        <textarea name="editor1" class="form-control"></textarea>
+      </div>
+        </form>
+        <div class="modal-footer">
+          <button class="btn btn-purple" data-dismiss="modal">Send</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
